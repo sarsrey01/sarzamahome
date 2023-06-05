@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<style>
+	html {
+	font-size: 10px;
+	}
+	
+	.text {
+	font-size: 3rem;
+	width: 8;
+	padding: 7rem;
+	border: 3px solid black;
+	margin: auto;
+	text-align: center;
+	background-color: aliceblue;
+	color: black;
+	
+	}
+	
+	
+	*  {
+	
+	box-sizing: border-box;
+	}
+	
+p {
+    font-size: 15px;
+	font-family: sans-serif;
+	color: #add8e6;
+}
+
+   
+   container , .container1, .container2{
+    padding: 100px; 30px;
+	width: 100%;
+	margin: 0 auto;
+	max-width: 900px;
+  }
+  
+// Relevant styles
+.image-stack {
+    display: grid;
+	grid-template-column: repeat(13, 1fr);
+	position: relative;
+}
+
+.image-stack__item--bottom {
+	position: absolute;
+	right: 0;
+	top: 0;
+	width: 50%; // this is an arbitrary width, depends on the design
+	z-index: 0;
+	transform: rotate(-10deg);
+}
+
+.image-stack_item--top {
+    padding-top: 20px; // arbitrary value
+	padding-right: 20% // arbitrary value
+	width: 80% // arbitrary value	
+} 
+
+img {
+    width: 100%
+	display: block;
+}
+
+  .container1 {
+  background-image: url("https://img.freepik.com/free-vector/gradient-blur-pink-blue-abstract-background_53876-117324.jpg?w=740&t=st=1678686855~exp=1678687455~hmac=7030ad7f3aa584d0dda1c38cdcdbe8752b01a2dfe389ae40cfd1163ea7b1d59f");
+  background-size: contain;
+  width: 500px;
+  height: 500px;
+  border: 5px dash;
+  color: black;
+  resize: both;
+  overflow: scroll;
+
+}
+  
+  .container2 {
+  border: 5px solid black;
+  background-image: url("https://cdn.pixabay.com/photo/2022/06/12/22/48/gradient-7258997_960_720.png");
+  background-reapeat: no-repeat;
+  color: hsl (276, 72%, 76%);
+  opacity: 0.8;
+  }
+  
+  h2 {
+  font-size: 8px;
+  }
+  
+ </style>
+ 
+ <body>
+ <div class="container">
+ 
+ <div class="image-stack">
+ <div class="image-stack_item--bottom">
+	<img scr="https://i.stack.imgur.com/PIIYY.jpg"></img>
+</div>
+
+<div>
+	<p class='text'>What is Absolute and Relative Values?</p>
+	<p class='text'>Absolute –is relative to the first parent element that has a position other than static</p>
+	<p class='text'>Relative - positioned element is positioned relative to its normal position</p>
+</div>
+
+   <div class='container1'>
+	<p class='text'>Lengths</p>
+	<h1 class='def'>Absolute length units</h1>
+	<h1>As shown in the picture this is an example of how an Absolute length unit looks like.</h1>
+	<h1 class='def2'>Relative length units</h1>
+	<h1>The first image is an example of how an Relative length unit looks like it is is being executed</h1>
+</div>
+
+	<div class='container2'>
+	<p class='text'>What are Color Properties in CSS?</p>
+	<h1>The color CSS property sets the foreground color value of an element's text and text decorations, and sets the currentcolor value. currentcolor may be used as an indirect value on other properties and is the default for other color properties, such as border-color</h1>
+</div>
+
+
+</body>
+</html>

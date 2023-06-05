@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Friend Registry</title>
+		<style>
+		    body {
+			    background-color: #100058;
+			}
+			form {
+				border: 10px solid #15e7ee;
+				padding: 20px;
+				max-width: 500px;
+				margin: 0 auto;
+			}
+
+			label {
+				display: block;
+				margin-bottom: 10px;
+				font-weight: bold;
+			}
+
+			input[type="text"],
+			input[type="email"],
+			input[type="tel"],
+			textarea {
+				width: 100%;
+				padding: 10px;
+				margin-bottom: 50px;
+				border: 3px solid #1a1919;
+				border-radius: 5px;
+				box-sizing: border-box;
+				font-size: 18px;
+				background-color: #bebebe;
+			}
+
+			input[type="submit"] {
+				background-color: #460000;
+				color: white;
+				padding: 12px 20px;
+				border: none;
+				border-radius: 4px;
+				cursor: alias;
+				font-size: 18px;
+			}
+
+			input[type="submit"]:hover {
+				background-color: #ff6347;
+			}
+
+			h1 {
+				text-align: center;
+				font-family: "Times New Roman", Times, serif;
+				font-style: inherit;
+			}
+		</style>
+	</head>
+	<body>
+		<h1>FRIEND REGISTRY</h1>
+		<form action="https://script.google.com/macros/s/AKfycbxbxYatxcQ5EgrLrTLmGaUaBs8rk_c1zNxzFOltqivsZ0daVQ_ymaAC7NYSR9cyfnorBA/exec" method='post'>
+			<label for="name">NAME:</label>
+			<input type="text" id="name" name="name" />
+
+			<label for="email">EMAIL:</label>
+			<input type="email" id="email" name="email" />
+
+			<label for="phone">PHONE:</label>
+			<input type="tel" id="phone" name="phone" />
+
+			<label for="birthday">BIRTHDAY:</label>
+			<input type="date" id="birthday" name="birthday" />
+
+			<label for="address"><br>ADDRESS:</label>
+			<input type="text" id="address" name="address" />
+
+			<label for="interests">INTEREST:</label>
+			<textarea id="interests" name="interest"></textarea>
+
+			<input type="submit" value="Submit" />
+		</form>
+	</body>
+</html>
