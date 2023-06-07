@@ -1,93 +1,148 @@
 <!DOCTYPE html>
 <html>
-	<head>
-		<title>Friend Registry</title>
-		<style>
-		    body {
-				font-family: Arial, sans-serif;
-				background-image: url(https://i.gifer.com/Xrqy.gif);
-				background-size: cover;
-				margin: 0;
-				padding: 20px;
-				background-color: #bd2828;
-				background-repeat: no-repeat;
-				;
-			  }
-		  
-			  h1 {
-				text-align: center;
-				color: #e6dddd;
-			  }
-		  
-			  name{color: white;}
+<head>
+	<title>Friend Registry</title>
+	<style>
+		body {
+			font-family: Arial, sans-serif;
+			background-image: url(wallpaperflare.com_wallpaper.jpg);
+			background-size: cover;
+			margin: 0;
+			padding: 20px;
+			background-color: #f4f4f4;
+		}
 
-			  .container {
-				max-width: 500px;
-				margin: 0 auto;
-				background-color: #fff;
-				border: 1px solid #ccc;
+		h1 {
+			text-align: center;
+			color: #070000;
+			margin-bottom: 30px;
+		}
+
+		.container {
+			max-width: 500px;
+			margin: 0 auto;
+			background-color: #fff;
+			border: 1px solid #ccc;
+			padding: 30px;
+			border-radius: 10px;
+			box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+		}
+
+		.form-group {
+			margin-bottom: 20px;
+			text-align: left;
+		}
+
+		label {
+			display: block;
+			font-weight: bold;
+			margin-bottom: 5px;
+			color: #333;
+		}
+
+		input[type="text"],
+		input[type="email"],
+		input[type="tel"],
+		textarea,
+		select {
+			width: 100%;
+			padding: 10px;
+			border: 1px solid #ccc;
+			border-radius: 5px;
+			font-size: 16px;
+			margin-bottom: 10px;
+			transition: border-color 0.3s ease;
+		}
+
+		input[type="text"]:focus,
+		input[type="email"]:focus,
+		input[type="tel"]:focus,
+		textarea:focus,
+		select:focus {
+			border-color: #bd2828;
+		}
+
+		button {
+			background-color: #bd2828;
+			color: #fff;
+			padding: 10px 20px;
+			border: none;
+			border-radius: 5px;
+			cursor: pointer;
+			font-size: 16px;
+			transition: background-color 0.3s ease;
+		}
+
+		button:hover {
+			background-color: #8c1c1c;
+		}
+
+		.error {
+			color: red;
+			font-size: 14px;
+			margin-top: 5px;
+		}
+
+		.success-message {
+			color: green;
+			font-size: 14px;
+			margin-top: 5px;
+		}
+
+		@media (max-width: 768px) {
+			.container {
 				padding: 20px;
-				border-radius: 5px;
-				text-align: center;
-			  }
-		  
-			  .form-group {
-				margin-bottom: 20px;
-				text-align: left;
-			  }
-		  
-			  label {
-				display: block;
-				font-weight: bold;
-				margin-bottom: 5px;
-			  }
-		  
-			  input[type="text"],
-			  input[type="email"],
-			  input[type="tel"],
-			  textarea {
-				width: 100%;
-				padding: 10px;
-				border: 1px solid #ccc;
-				border-radius: 5px;
-			  }
-		  
-			  button {
-				background-color: #4CAF50;
-				color: white;
-				padding: 10px 20px;
-				border: none;
-				border-radius: 5px;
-				cursor: pointer;
-			  }
-		  
-			  button:hover {
-				background-color: #d0ddd1;
-			  }
-			</style>
-	</head>
-	<body>
+			}
+		}
+	</style>
+</head>
+<body>
+	<div class="container">
 		<h1>FRIEND REGISTRY</h1>
-		<form action="https://script.google.com/macros/s/AKfycbwHb99WcB2JDzzhwSSX-vsPO12ALABzq4Qm9dyS9yFtUnQ3_TK3cs3lDjWTq5V4PVMhSw/exec" method='post'>
-			<label for="name">NAME:</label>
-			<input type="text" id="name" name="name" />
+		<form action="https://script.google.com/macros/s/AKfycbz5YxtBTueLgcqWcSvRHsvHWSnahekBOhGNKRi6j_1bCzkKuTxCb44n0fDFkp8cIXAsIg/exec" method="post">
+			<div class="form-group">
+				<label for="name">Name:</label>
+				<input type="text" id="name" name="name" required placeholder="Enter your name" />
+			</div>
 
-			<label for="email">EMAIL:</label>
-			<input type="email" id="email" name="email" />
+			<div class="form-group">
+				<label for="email">Email:</label>
+				<input type="email" id="email" name="email" required placeholder="Enter your email" />
+			</div>
 
-			<label for="phone">PHONE:</label>
-			<input type="tel" id="phone" name="phone" />
+			<div class="form-group">
+				<label for="gender">Gender:</label>
+				<select id="gender" name="gender">
+					<option value="male">Male</option>
+					<option value="female">Female</option>
+					<option value="other">Other</option>
+				</select>
+			</div>
 
-			<label for="birthday">BIRTHDAY:</label>
-			<input type="date" id="birthday" name="birthday" />
+			<div class="form-group">
+				<label for="phone">Phone:</label>
+				<input type="tel" id="phone" name="phone" placeholder="Enter your phone number" />
+			</div>
 
-			<label for="address"><br>ADDRESS:</label>
-			<input type="text" id="address" name="address" />
+			<div class="form-group">
+				<label for="birthday">Birthday:</label>
+				<input type="date" id="birthday" name="birthday" />
+			</div>
 
-			<label for="interests">INTEREST:</label>
-			<textarea id="interests" name="interest"></textarea>
+			<div class="form-group">
+				<label for="address">Address:</label>
+				<input type="text" id="address" name="address" placeholder="Enter your address" />
+			</div>
 
-			<input type="submit" value="Submit" />
+			<div class="form-group">
+				<label for="interests">Interests:</label>
+				<textarea id="interests" name="interest" placeholder="Enter your interests"></textarea>
+			</div>
+
+			<div class="form-group">
+				<input type="submit" value="Submit" />
+			</div>
 		</form>
-	</body>
+	</div>
+</body>
 </html>
